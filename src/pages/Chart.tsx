@@ -127,6 +127,13 @@ const stocks = [
   { symbol: "NVDA", name: "NVIDIA Corporation" },
 ];
 
+// Custom tooltip type
+interface CustomTooltipProps {
+  active?: boolean;
+  payload?: any[];
+  label?: string;
+}
+
 const Chart = () => {
   const [selectedStock, setSelectedStock] = useState(stocks[0]);
   const [selectedTimeframe, setSelectedTimeframe] = useState("1D");
@@ -157,7 +164,7 @@ const Chart = () => {
   };
 
   // Custom tooltip for chart
-  const CustomTooltip = ({ active, payload, label }) => {
+  const CustomTooltip = ({ active, payload, label }: CustomTooltipProps) => {
     if (active && payload && payload.length) {
       return (
         <div className="bg-card border border-border p-3 rounded-md shadow-md">
@@ -417,10 +424,10 @@ const Chart = () => {
                       <TrendingUp className="h-4 w-4 mr-2" />
                       Indicators
                     </Button>
-                    <Button variant="outline" size="icon" size="sm">
+                    <Button variant="outline" size="sm" className="w-8 h-8 p-0">
                       <ChevronLeft className="h-4 w-4" />
                     </Button>
-                    <Button variant="outline" size="icon" size="sm">
+                    <Button variant="outline" size="sm" className="w-8 h-8 p-0">
                       <ChevronRight className="h-4 w-4" />
                     </Button>
                   </div>
