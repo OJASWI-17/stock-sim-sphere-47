@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,9 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+        gain: '#16c784',
+        loss: '#ea3943',
+        tradingBlue: '#1E88E5',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +88,33 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'pulse-glow': {
+          '0%, 100%': { 
+            opacity: '1',
+            boxShadow: '0 0 20px rgba(59, 130, 246, 0.6)' 
+          },
+          '50%': { 
+            opacity: '0.8',
+            boxShadow: '0 0 10px rgba(59, 130, 246, 0.3)' 
+          },
+        },
+        'fade-in': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(10px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          }
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'fade-in': 'fade-in 0.3s ease-out'
 			}
 		}
 	},
