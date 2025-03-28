@@ -10,6 +10,7 @@ import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import Portfolio from "./pages/Portfolio";
 import Chart from "./pages/Chart";
+import Watchlist from "./pages/Watchlist";
 import History from "./pages/History";
 import Leaderboard from "./pages/Leaderboard";
 import NotFound from "./pages/NotFound";
@@ -29,8 +30,11 @@ const App = () => (
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/chart" element={<Chart />} />
+            <Route path="/watchlist" element={<Watchlist />} />
             <Route path="/history" element={<History />} />
             <Route path="/leaderboard" element={<Leaderboard />} />
+            <Route path="/profile" element={<Navigate to="/dashboard" />} />
+            <Route path="/wallet" element={<Navigate to="/dashboard" />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

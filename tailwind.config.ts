@@ -53,9 +53,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-        gain: '#16c784',
-        loss: '#ea3943',
-        tradingBlue: '#1E88E5',
+				gain: '#16c784',
+				loss: '#ea3943',
+				tradingBlue: '#1E88E5',
+				crypto: {
+					tether: '#26a17b',
+					bitcoin: '#f7931a',
+					sushi: '#a372cf'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
